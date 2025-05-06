@@ -1,5 +1,6 @@
 packages:
   - core
+  - proxy
   - packages/*
 onlyBuiltDependencies:
   - '@parcel/watcher'
