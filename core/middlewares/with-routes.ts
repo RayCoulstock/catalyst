@@ -236,6 +236,8 @@ const getRouteInfo = async (request: NextRequest, event: NextFetchEvent) => {
       kvKey(STORE_STATUS_KEY, channelId),
     );
 
+    console.log('pathname', pathname, routeCache, statusCache);
+
     // If caches are old, update them in the background and return the old data (SWR-like behavior)
     // If cache is missing, update it and return the new data, but write to KV in the background
     if (statusCache && statusCache.expiryTime < Date.now()) {
